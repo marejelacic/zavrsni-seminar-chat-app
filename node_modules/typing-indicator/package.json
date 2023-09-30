@@ -1,0 +1,16 @@
+{
+  "name": "typing-indicator",
+  "version": "1.0.0",
+  "description": "Typing indicator logic for chat apps. A sane way of understanding when a user is typing and when they aren't. Use it with any framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typing",
+    "chat",
+    "indicator"
+  ],
+  "author": "Scaledrone",
+  "license": "ISC"
+}
