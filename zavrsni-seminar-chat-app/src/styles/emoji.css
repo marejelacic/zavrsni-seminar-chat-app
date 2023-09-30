@@ -1,0 +1,28 @@
+.emoji-list {
+    list-style-type: none;
+    width: calc(95vw -1px);
+    height: 200px;
+    padding-top: 3px;
+    padding-left: 10px;
+    overflow: scroll;
+    flex-wrap: wrap;
+    border-top: 5px solid rgb(63, 63, 63);
+    background-color: rgb(44, 44, 44);
+  }
+  
+  .emoji-list > li {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 24px;
+  }
+  
+  .emoji-btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 0px 5px;
+    font-size: 30px;
+  }

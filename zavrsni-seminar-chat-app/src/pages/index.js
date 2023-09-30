@@ -47,7 +47,6 @@ export default function Home() {
   const [messages, setMessages] = useState([]);
   console.log('messages',messages)
   const [members, setMembers] = useState([]);
-  console.log('members',members)
 
   const [me, setMe] = useState({
     username: randomName(),
@@ -130,7 +129,6 @@ useEffect(() => {
 
 function onChangeTypingState(isTyping) {
   console.log('onChangeTypingState',isTyping)
-  console.log()
   drone.publish({
     room: 'observable-room',
     message: {typing: isTyping}
@@ -149,14 +147,16 @@ function onChangeTypingState(isTyping) {
       </Head>
       <main className={styles.app}>
         <div className={styles.appContent}>
-        <Members members={members} me={me}/>
+          <Members members={members} me={me}/>
+          <div className={styles.mainContainer}>
+            <Messages messages={messages} me={me}/>
+            <TypingIndicator members={members.filter(m => m.typing && m.id !== me.id)}/>
 
-        <Messages messages={messages} me={me}/>
-        <TypingIndicator members={members.filter(m => m.typing && m.id !== me.id)}/>
-<Input
-  onSendMessage={onSendMessage}
-  onChangeTypingState={onChangeTypingState}
-/>
+            <Input
+              onSendMessage={onSendMessage}
+              onChangeTypingState={onChangeTypingState}
+            />
+          </div>          
         </div>
       </main>
     </>
