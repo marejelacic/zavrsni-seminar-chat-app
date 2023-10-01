@@ -14,7 +14,6 @@ export default function Members({members, me}) {
   }
   
   function Member({id, clientData}, isMe) {
-    console.log(clientData)
     const {username, color} = clientData;
     return (
       <div key={id} className={styles.member}>
